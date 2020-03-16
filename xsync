@@ -1,9 +1,7 @@
 #!/bin/bash
 
-if [[ -x $(command -v rsync) ]]; then
-  echo yes > /dev/null
-else
-  echo no rsync found!  
+if [[ ! -x $(command -v rsync) ]]; then
+  echo no rsync found!
   exit 1
 fi
 
